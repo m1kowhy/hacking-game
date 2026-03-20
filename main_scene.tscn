@@ -1,38 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4wwv18cb4as6"]
+[gd_scene format=3 uid="uid://b4wwv18cb4as6"]
+
+[ext_resource type="Script" uid="uid://dq000uw2oaokg" path="res://buttonClick.gd" id="1_0f027"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3jxj"]
-bg_color = Color(0.25367293, 0.6221204, 0, 1)
+bg_color = Color(0.6163688, 0, 0.11288986, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="MainScene" type="Node2D"]
+[node name="MainScene" type="Node2D" unique_id=1961985]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=74035595]
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=47417786]
 offset_left = -429.0
 offset_top = -55.0
 offset_right = -309.0
 offset_bottom = 53.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_o3jxj")
 text = "A"
+script = ExtResource("1_0f027")
 
-[node name="Button2" type="Button" parent="."]
-offset_left = 355.0
-offset_top = -54.0
-offset_right = 475.0
-offset_bottom = 54.0
+[node name="PipeFill" type="Line2D" parent="Button" unique_id=963488365]
+z_index = 1
+position = Vector2(120.770874, 53.61469)
+rotation = 3.1415927
+scale = Vector2(-0.0005546215, 1.0682989)
+points = PackedVector2Array(-308, -1, -130.94397, -1, 1, -1, 356, -1)
+
+[node name="Button2" type="Button" parent="Button" unique_id=873415141]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 1.0
+offset_right = 904.0
+offset_bottom = 109.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_o3jxj")
 disabled = true
 text = "B"
 
-[node name="PipeOutline" type="Line2D" parent="."]
+[node name="PipeOutline" type="Line2D" parent="." unique_id=836915747]
+position = Vector2(-0.1325357, 0)
+scale = Vector2(1.0056418, 1)
 points = PackedVector2Array(-307, -1, 0, -1, 354, -1)
 width = 24.0
 default_color = Color(0, 0, 0, 1)
 
-[node name="PipeFill" type="Line2D" parent="."]
-points = PackedVector2Array(-308, -1, 1, -1, 356, -1)
-width = 16.0
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
