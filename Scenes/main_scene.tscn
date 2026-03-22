@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b4wwv18cb4as6"]
 
-[ext_resource type="Script" uid="uid://dq000uw2oaokg" path="res://Scripts/buttonClick.gd" id="1_0f027"]
+[ext_resource type="Script" uid="uid://dq000uw2oaokg" path="res://Scripts/buttonClick.gd" id="1_52fb6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o3jxj"]
 bg_color = Color(0.6163688, 0, 0.11288986, 1)
@@ -19,7 +19,7 @@ offset_top = -55.0
 offset_right = -309.0
 offset_bottom = 53.0
 text = "A"
-script = ExtResource("1_0f027")
+script = ExtResource("1_52fb6")
 
 [node name="PipeFill" type="Line2D" parent="Button" unique_id=963488365]
 z_index = 1
